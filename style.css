@@ -333,3 +333,9 @@ textarea::placeholder {
   font-size: 30px;
   font-weight: 700;
 }
+
+@media screen and (max-width: 480px) {
+  .fila-valor-base {
+    flex-direction: column;
+  }
+}

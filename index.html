@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diario</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="diario">
+      <h1>Tracker Rocco</h1>
+      <hr class="top" />
+
+      <div class="panel">
+        <div class="fecha-actual" id="fechaActual">
+          <span id="fechaTexto"></span>
+          <span class="flecha">↑</span>
+        </div>
+
+        <div class="calendario-header">
+          <button id="mesAnterior">‹</button>
+          <h2 id="mesActual"></h2>
+          <button id="mesSiguiente">›</button>
+        </div>
+
+        <div class="dias-semana">
+          <span>D</span><span>L</span><span>M</span><span>X</span><span>J</span
+          ><span>V</span><span>S</span>
+        </div>
+
+        <div class="grilla-dias" id="grillaDias"></div>
+      </div>
+
+      <div class="panel">
+        <div class="registro-header">REGISTRO DEL DÍA</div>
+        <div class="registro-body">
+          <div class="bloque-registro">
+            <label>Mañana</label>
+            <div class="opciones">
+              <button class="si" id="btnMananaSi">si</button>
+              <button class="no" id="btnMananaNo">no</button>
+            </div>
+          </div>
+
+          <div class="bloque-registro">
+            <label>Tarde/Noche</label>
+            <div class="opciones">
+              <button class="si" id="btnTardeSi">si</button>
+              <button class="no" id="btnTardeNo">no</button>
+            </div>
+          </div>
+
+          <div class="bloque-registro">
+            <label>Nota (opcional)</label>
+            <textarea id="nota" placeholder="Escribe aquí..."></textarea>
+          </div>
+
+          <button class="btn-guardar" id="btnGuardar">GUARDAR</button>
+        </div>
+        <div class="guardado" id="guardadoTexto"></div>
+      </div>
+
+      <div class="panel">
+        <div class="registro-header">TOTAL SEMANAL</div>
+        <div class="registro-body">
+          <p class="semana-rango" id="semanaRango"></p>
+          <div class="fila-valor-base">
+            <input type="number" id="valorBase" placeholder="5000" />
+            <button id="btnCalcular">CALCULAR TOTAL</button>
+          </div>
+          <div class="resultado-total">
+            <p class="etiqueta">TOTAL</p>
+            <p class="monto" id="montoTotal">—</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
